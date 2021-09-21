@@ -25,7 +25,7 @@ if (isset($_GET['letter']) && isset($_GET['page'])) {
     foreach ($pagination as $p) {
         $next = $p->first_child()->plaintext;
 
-        $p->first_child()->href = "/pai/finder.php?letter={$_GET['letter']}&page={$next}";
+        $p->first_child()->href = "/finder.php?letter={$_GET['letter']}&page={$next}";
         echo $p;
     }
     echo "</ul>";
